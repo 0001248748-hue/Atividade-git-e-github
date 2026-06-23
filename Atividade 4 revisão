@@ -1,0 +1,332 @@
+programa {
+    funcao inicio() {
+        escreva("Hello, World!")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro num1, num2, soma
+        escreva("Digite o primeiro número: ")
+        leia(num1)
+        escreva("Digite o segundo número: ")
+        leia(num2)
+        soma = num1 + num2
+        escreva("A soma é: ", soma)
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro numero
+        escreva("Digite um número: ")
+        leia(numero)
+        se (numero % 2 == 0) {
+            escreva("O número é par.")
+        } senao {
+            escreva("O número é ímpar.")
+        }
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro num1, num2
+        escreva("Digite o primeiro número: ")
+        leia(num1)
+        escreva("Digite o segundo número: ")
+        leia(num2)
+        se (num1 > num2) {
+            escreva("O maior número é: ", num1)
+        } senao {
+            escreva("O maior número é: ", num2)
+        }
+    }
+}
+
+programa {
+    funcao inicio() {
+        real num1, num2, num3, media
+        escreva("Digite o primeiro número: ")
+        leia(num1)
+        escreva("Digite o segundo número: ")
+        leia(num2)
+        escreva("Digite o terceiro número: ")
+        leia(num3)
+        media = (num1 + num2 + num3) / 3
+        escreva("A média é: ", media)
+    }
+}
+
+programa {
+    funcao inicio() {
+        real raio, area
+        escreva("Digite o raio do círculo: ")
+        leia(raio)
+        area = 3.14 * (raio * raio)
+        escreva("A área do círculo é: ", area)
+    }
+}
+
+programa {
+    funcao inicio() {
+        real celsius, fahrenheit
+        escreva("Digite a temperatura em Celsius: ")
+        leia(celsius)
+        fahrenheit = (celsius * 9/5) + 32
+        escreva("A temperatura em Fahrenheit é: ", fahrenheit)
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro numero, resultado, contador
+        
+        escreva("Informe um número para ver sua tabuada: ")
+        leia(numero)
+                      
+        para (contador = 1; contador <= 10; contador++) {
+            resultado = numero * contador
+            escreva(numero, " X ", contador, " = ", resultado, "\n")
+        }
+    }
+}
+
+programa {
+  funcao inicio() {
+     inteiro numero, resultado, contador
+
+    escreva("Digite um numero: \n")
+    leia(numero)
+
+    contador = 1
+
+    enquanto(contador <=10) {
+      resultado = numero*contador
+      escreva(numero, " X ", contador, " = ", resultado,"\n")
+      contador = contador+1
+    }
+  }
+}
+
+programa {
+    funcao inicio() {
+        inteiro numero, fatorial, contador
+        
+        escreva("Informe um número para calcular o fatorial: ")
+        leia(numero)
+        
+        fatorial = 1
+        
+        para (contador = 1; contador <= numero; contador++) {
+            fatorial = fatorial * contador
+        }
+        
+        escreva("O fatorial de ", numero, " é: ", fatorial)
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro contador
+        
+        escreva("Contagem regressiva:\n")
+        
+        para (contador = 10; contador >= 1; contador--) {
+            escreva(contador, "\n")
+        }
+        
+        escreva("Contagem finalizada!")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro num, i, divisores
+        divisores = 0
+        
+        escreva("Digite um número: ")
+        leia(num)
+        
+        para (i = 1; i <= num; i++) {
+            se (num % i == 0) {
+                divisores = divisores + 1
+            }
+        }
+        
+        se (divisores == 2) {
+            escreva("O número ", num, " é primo.\n")
+        } senao {
+            escreva("O número ", num, " não é primo.\n")
+        }
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro n, soma, i
+        soma = 0
+        
+        escreva("Digite um número natural: ")
+        leia(n)
+        
+        para (i = 1; i <= n; i++) {
+            soma = soma + i
+        }
+        
+        escreva("A soma dos primeiros ", n, " números naturais é: ", soma, "\n")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro n, a, b, prox, i
+        a = 0
+        b = 1
+        
+        escreva("Digite quantos termos da sequência de Fibonacci deseja: ")
+        leia(n)
+        
+        escreva(a, " ", b, " ")
+        
+        para (i = 3; i <= n; i++) {
+            prox = a + b
+            escreva(prox, " ")
+            a = b
+            b = prox
+        }
+        escreva("\n")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro num, invertido, resto
+        
+        escreva("Digite um número: ")
+        leia(num)
+        
+        invertido = 0
+        
+        enquanto (num > 0) {
+            resto = num % 10
+            invertido = (invertido * 10) + resto
+            num = num / 10
+        }
+        
+        escreva("O número invertido é: ", invertido, "\n")
+    }
+}
+
+programa {
+    funcao inicio() {
+        real base, resultado
+        inteiro expoente, i
+        
+        escreva("Digite a base: ")
+        leia(base)
+        
+        escreva("Digite o expoente: ")
+        leia(expoente)
+        
+        resultado = 1
+        
+        para (i = 1; i <= expoente; i++) {
+            resultado = resultado * base
+        }
+        
+        escreva(base, " elevado a ", expoente, " é: ", resultado, "\n")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro a, b, mdc
+        
+        escreva("Digite o primeiro número: ")
+        leia(a)
+        escreva("Digite o segundo número: ")
+        leia(b)
+        
+        enquanto (b != 0) {
+            mdc = a % b
+            a = b
+            b = mdc
+        }
+        
+        escreva("O MDC é: ", a, "\n")
+    }
+}
+
+programa {
+    funcao inicio() {
+        inteiro a, b, aux_a, aux_b, mmc
+        
+        escreva("Digite o primeiro número: ")
+        leia(a)
+        escreva("Digite o segundo número: ")
+        leia(b)
+        
+        aux_a = a
+        aux_b = b
+        
+        enquanto (aux_a != aux_b) {
+            se (aux_a < aux_b) {
+                aux_a = aux_a + a
+            } senao {
+                aux_b = aux_b + b
+            }
+        }
+        
+        mmc = aux_a
+        escreva("O MMC é: ", mmc, "\n")
+    }
+}
+
+programa {
+	funcao inicio() {
+		inteiro numero, soma, i
+
+		escreva("Digite um número: ")
+		leia(numero)
+
+		soma = 0
+		para (i = 1; i < numero; i++) {
+			se (numero % i == 0) {
+				soma = soma + i
+			}
+		}
+
+		se (soma == numero) {
+			escreva(numero, " é um número perfeito.\n")
+		} senao {
+			escreva(numero, " não é um número perfeito.\n")
+		}
+	}
+}
+
+programa {
+	inclua biblioteca Util --> u
+	
+	funcao inicio() {
+		inteiro numero_secreto, palpite
+
+		// Gerar um número secreto aleatório entre 1 e 100
+		numero_secreto = u.sorteia(1, 100)
+
+		escreva("Adivinhe o número secreto entre 1 e 100: ")
+		leia(palpite)
+
+		// Enquanto o palpite estiver errado, continue perguntando
+		enquanto (palpite != numero_secreto) { 
+			se (palpite < numero_secreto) {
+				escreva("Muito baixo! Tente novamente: ")
+			} senao {
+				escreva("Muito alto! Tente novamente: ")
+			}
+			leia(palpite)
+		}
+
+		escreva("Parabéns! Você adivinhou o número secreto: ", numero_secreto, ".\n")
+	}
+}
